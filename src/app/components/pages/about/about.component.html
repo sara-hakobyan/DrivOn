@@ -1,0 +1,48 @@
+<div class="about-header">
+  <div class="text-center">
+    <a routerLink="/home-five" href="/home-five" class="home-link">
+      {{ "navbar.home" | translate }}</a
+    >
+    / {{ "navbar.about" | translate }}
+  </div>
+</div>
+
+<section class="py-5">
+  <div class="">
+    <div class="cont">
+      <div class="about-text">
+        <div>
+          <h1>{{ "about.story.ourStory-title" | translate }}</h1>
+          <p>
+            {{ "about.story.text" | translate }}
+          </p>
+        </div>
+        <div>
+          <h2>{{ "about.mission.mission-title" | translate }}</h2>
+          <p>
+            {{ "about.mission.text" | translate }}
+          </p>
+        </div>
+      </div>
+      <div class="about-img">
+        <img
+          src="assets/images/about/instructor.jpg"
+          class="img-responsive"
+          alt="instructor"
+        />
+      </div>
+    </div>
+    <div class="mx-5 service-conetent">
+      <h2>{{ "about.chooseUs.title" | translate }}</h2>
+      <div *ngFor="let item of whyChooseUs">
+        <div class="d-flex">
+          ✔️
+          <p>
+            <span class="option-title">{{ item.title }} </span>
+            <span>{{ item.describtion }}</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

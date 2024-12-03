@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "becki-app": {
+    "drivOn": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -26,6 +26,10 @@
           "ru": {
             "translation": "src/locale/messages.ru.xlf",
             "baseHref": ""
+          },
+          "am": {
+            "translation": "src/locale/messages.am.xlf",
+            "baseHref": ""
           }
         }
       },
@@ -33,7 +37,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/becki-app",
+            "localize": true,
+            "i18nMissingTranslation": "error",
+            "outputPath": "dist/drivOn",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": ["zone.js"],
@@ -75,9 +81,7 @@
               "outputHashing": "all"
             },
             "ru": {
-              "localize": ["ru"],
-              "outputPath": "dist/becki-app-ru/",
-              "i18nMissingTranslation": "error"
+              "localize": ["ru"]
             },
             "development": {
               "optimization": false,
@@ -91,13 +95,13 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "becki-app:build:production"
+              "buildTarget": "drivOn:build:production"
             },
             "development": {
-              "buildTarget": "becki-app:build:development"
+              "buildTarget": "drivOn:build:development"
             },
             "ru": {
-              "buildTarget": "becki-app:build:build:ru"
+              "browserTarget": "drivOn:build:development,ru"
             }
           },
           "defaultConfiguration": "development"
@@ -105,7 +109,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "becki-app:build",
+            "buildTarget": "drivOn:build",
             "outputPath": "src/locale",
             "format": "xlf",
             "outFile": "messages.xlf"
@@ -125,11 +129,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "becki-app-ng:serve"
+            "devServerTarget": "drivOn-ng:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "becki-app:serve:production"
+              "devServerTarget": "drivOn:serve:production"
             }
           }
         }

@@ -18,16 +18,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/common/navbar/navbar.component';
 import { FooterComponent } from './components/common/footer/footer.component';
-// import { DemosComponent } from './components/pages/demos/demos.component';
-// import { HomeOneComponent } from './components/pages/home-one/home-one.component';
-// import { HomeTwoComponent } from './components/pages/home-two/home-two.component';
-// import { HomeThreeComponent } from './components/pages/home-three/home-three.component';
-// import { HomeFourComponent } from './components/pages/home-four/home-four.component';
 import { HomeFiveComponent } from './components/pages/home-five/home-five.component';
-// import { HomeSixComponent } from './components/pages/home-six/home-six.component';
-// import { HomeSevenComponent } from './components/pages/home-seven/home-seven.component';
-// import { HomeEighthComponent } from './components/pages/home-eighth/home-eighth.component';
-// import { HomeNineComponent } from './components/pages/home-nine/home-nine.component';
 import { BlogComponent } from './components/pages/blog/blog.component';
 import { BlogDetailsComponent } from './components/pages/blog-details/blog-details.component';
 import { CountersComponent } from './components/pages/counters/counters.component';
@@ -36,23 +27,23 @@ import { TestimonialsComponent } from './components/pages/testimonials/testimoni
 import { PricingsComponent } from './components/pages/pricings/pricings.component';
 import { ErrorComponent } from './components/pages/error/error.component';
 import { ComingSoonComponent } from './components/pages/coming-soon/coming-soon.component';
-// import { ShowCaseComponent } from './components/pages/show-case/show-case.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { About } from './components/pages/about/about.component';
+import { Services } from './components/pages/services/services.component';
+import { GoogleMapsModule } from '@angular/google-maps';
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    // DemosComponent,
-    // HomeOneComponent,
-    // HomeTwoComponent,
-    // HomeThreeComponent,
-    // HomeFourComponent,
     HomeFiveComponent,
-    // HomeSixComponent,
-    // HomeSevenComponent,
-    // HomeEighthComponent,
-    // HomeNineComponent,
     BlogComponent,
     BlogDetailsComponent,
     CountersComponent,
@@ -61,10 +52,20 @@ import { ComingSoonComponent } from './components/pages/coming-soon/coming-soon.
     PricingsComponent,
     ErrorComponent,
     ComingSoonComponent,
-    // ShowCaseComponent,
+    About,
+    Services,
   ],
   imports: [
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
     BrowserModule,
+    GoogleMapsModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,

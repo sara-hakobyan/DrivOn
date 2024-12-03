@@ -1,0 +1,75 @@
+<div class="about-header">
+  <div class="text-center">
+    <a routerLink="/home-five" href="/home-five" class="home-link">
+      {{ "navbar.home" | translate }}</a
+    >
+    / {{ "navbar.services" | translate }}
+  </div>
+</div>
+
+<section class="py-5">
+  <div class="cont">
+    <div class="service-text">
+      <div>
+        <h1>{{ "home.ourPackages" | translate }}</h1>
+        <p>
+          {{ "home.packages-intro" | translate }}
+        </p>
+      </div>
+      <div>
+        <h2>{{ "services.offer-title" | translate }}</h2>
+        <p>
+          {{ "services.intro" | translate }}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="offers-container" style="margin-top: 40px">
+    <div class="left-side">
+      <div *ngFor="let item of left">
+        <h4>{{ item.type }}</h4>
+        <h5>{{ item.goal }}</h5>
+        <div *ngFor="let data of item.info">
+          <li>{{ data }}</li>
+        </div>
+
+        <p style="margin-top: 20px">{{ item.price }}</p>
+      </div>
+      <!-- <div>
+        <h4>Փաթեթ "Գործնական"</h4>
+        <h5>Վարորդական իրավունքի գործնական քննության պատրաստում</h5>
+        <div style="margin-top: 20px">
+          <li>Ծրագրում՝11 քննական վարժություն</li>
+          <li>վարման դասեր քննական երթուղիով</li>
+          <li>Քննության փորձնական հանձնում</li>
+          <li>գործնական դաս՝ 10 դասաժամ</li>
+          <li>փաթեթի տևողությունը՝ 1 ամիս</li>
+          <li>դասի տեղանք և գրաֆիկը՝ ճկուն</li>
+          <li>դասի տևողությունը՝ 1 ժամ</li>
+        </div>
+
+        <p style="margin-top: 20px">Փաթեթի արժեքն է 70000 դր</p>
+      </div> -->
+    </div>
+
+    <div class="service-img">
+      <img
+        src="assets/images/about/signs.png"
+        class="img-responsive"
+        alt="instructor"
+      />
+    </div>
+
+    <div>
+      <div *ngFor="let item of right">
+        <h4>{{ item.type }}</h4>
+        <h5>{{ item.goal }}</h5>
+        <div *ngFor="let data of item.info">
+          <li>{{ data }}</li>
+        </div>
+
+        <p style="margin-top: 20px">{{ item.price }}</p>
+      </div>
+    </div>
+  </div>
+</section>

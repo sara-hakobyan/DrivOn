@@ -1,0 +1,74 @@
+.about-header {
+  background-color: rgba(30, 13, 99, 1);
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-link {
+  color: white;
+}
+
+.home-link:hover {
+  color: rgb(130, 171, 206);
+}
+
+.cont {
+  margin-right: 45px;
+  margin-left: 45px;
+  display: flex;
+  gap: 80px;
+}
+
+.service-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1.5;
+  gap: 10px;
+  text-align: center;
+}
+
+.service-img {
+  min-width: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-img > img {
+  width: auto;
+  height: 400px;
+}
+
+.offers-container {
+  align-items: center;
+  display: flex;
+  margin-right: 45px;
+  margin-left: 45px;
+}
+
+h1 {
+  text-align: center;
+  color: rgba(30, 13, 99, 1);
+  margin-bottom: 40px;
+}
+
+h2 {
+  text-align: center;
+  color: rgba(30, 13, 99, 1);
+}
+
+h4 {
+  color: rgba(30, 13, 99, 1);
+}
+.left-side > div {
+  text-align: end;
+}
+
+.left-side > div > ul > li::marker {
+  text-align: end !important;
+  display: none;
+  /* align-items: end; */
+  /* text-align: end; */
+}

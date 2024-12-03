@@ -1,5 +1,5 @@
 {
-  "name": "becki-app",
+  "name": "drivOn",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -17,10 +17,13 @@
     "@angular/compiler": "^17.3.0",
     "@angular/core": "^17.3.0",
     "@angular/forms": "^17.3.0",
+    "@angular/google-maps": "^17.3.10",
     "@angular/platform-browser": "^17.3.0",
     "@angular/platform-browser-dynamic": "^17.3.0",
     "@angular/router": "^17.3.0",
     "@emailjs/browser": "^4.4.1",
+    "@ngx-translate/core": "^16.0.3",
+    "@ngx-translate/http-loader": "^16.0.0",
     "@yoozly/ngx-parallax": "^17.0.0",
     "bootstrap": "^5.3.3",
     "lodash": "^4.17.21",

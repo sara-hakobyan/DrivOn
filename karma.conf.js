@@ -13,7 +13,7 @@ module.exports = function (config) {
 
     },
     coverageIstanbulReporter: {
-      dir: require('path').join(__dirname, './coverage/becki-app'),
+      dir: require('path').join(__dirname, './coverage/drivOn'),
       reports: ['html', 'lcovonly', 'text-summary'],
       fixWebpackSourcepaths: true
     },

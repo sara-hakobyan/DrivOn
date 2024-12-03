@@ -1,0 +1,50 @@
+.about-header {
+  background-color: rgba(30, 13, 99, 1);
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-link {
+  color: white;
+}
+
+.home-link:hover {
+  color: rgb(130, 171, 206);
+}
+
+.cont {
+  margin-right: 45px;
+  margin-left: 45px;
+  display: flex;
+  gap: 80px;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1.5;
+  gap: 10px;
+}
+
+.about-img > img {
+  width: auto;
+  /* min-width: 700px; */
+  height: 400px;
+  border-radius: 15px;
+}
+
+h1 {
+  color: rgba(30, 13, 99, 1);
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: rgba(30, 13, 99, 1);
+}
+
+.option-title {
+  font-weight: 600;
+  color: rgb(33, 6, 33);
+}
