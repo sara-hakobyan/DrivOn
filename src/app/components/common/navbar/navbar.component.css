@@ -1,0 +1,26 @@
+.option-val {
+  color: black;
+}
+
+.btn {
+  --bs-btn-font-weight: 600;
+  --bs-btn-color: white !important;
+  --bs-btn-border: none;
+}
+
+.btn:hover {
+  opacity: lightgray;
+}
+
+.btn:focus-visible,
+.btn:focus-within,
+.btn:active {
+  color: white !important;
+  border: none;
+}
+
+.navbar-collapse {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

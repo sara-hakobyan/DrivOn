@@ -1,43 +1,95 @@
 <nav class="navbar navbar-expand-lg nav-crev" [class.nav-scroll]="isSticky">
-    <div class="container">
-        <a class="navbar-brand icon-img-100" [routerLink] = "'/'">
-            <img [src]="logo" alt="Logo" class="logo">
-        </a>
-        <button class="navbar-toggler ms-auto" type="button" (click)="isCollapsed = !isCollapsed" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="icon-bar"><i class="icofont icofont-navigation-menu"></i></span>
-        </button>
-        <div class="collapse navbar-collapse" [ngClass]="{'collapse': isCollapsed, 'navbar-collapse': true}" id="navbarNavAltMarkup">
-            <ul class="navbar-nav navbar-center xs-mt-20">
-                <li class="nav-item">
-                    <a class="nav-link" (click)="scrollToSection('home')">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" (click)="scrollToSection('features')">Features</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" (click)="scrollToSection('team')">Team</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" (click)="scrollToSection('services')">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" (click)="scrollToSection('about')">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" (click)="scrollToSection('portfolio')">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" (click)="scrollToSection('pricings')">Pricings</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" (click)="scrollToSection('blog')">Blog</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" (click)="scrollToSection('contact')">Contact</a>
-                </li>
-            </ul>
-            <div class="nav-button ms-auto xs-ml-0 xs-mt-20"><ul class="nav navbar-nav navbar-right"><li><button type="button" class="btn btn-lg btn-gradient-primary btn-circle">Try it Free</button></li></ul></div>
-        </div>
-        
+  <div class="container">
+    <a class="navbar-brand icon-img-100" [routerLink]="'/'">
+      <!-- <img [src]="logo" alt="Logo" class="logo" /> -->
+      <p class="badge text-bg-light text-uppercase fs-6">drivOn</p>
+    </a>
+    <button
+      class="navbar-toggler ms-auto"
+      type="button"
+      (click)="isCollapsed = !isCollapsed"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="icon-bar"
+        ><i class="icofont icofont-navigation-menu"></i
+      ></span>
+    </button>
+    <div
+      class="collapse navbar-collapse"
+      [ngClass]="{ collapse: isCollapsed, 'navbar-collapse': true }"
+      id="navbarNavAltMarkup"
+    >
+      <ul class="navbar-nav navbar-center xs-mt-20">
+        <li class="nav-item">
+          <a class="nav-link" (click)="scrollToSection('home')">{{
+            "navbar.home" | translate
+          }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="scrollToSection('about')">{{
+            "navbar.about" | translate
+          }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="scrollToSection('features')">{{
+            "navbar.features" | translate
+          }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="scrollToSection('team')">{{
+            "navbar.team" | translate
+          }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="scrollToSection('services')">{{
+            "navbar.services" | translate
+          }}</a>
+        </li>
+
+        <!-- <li class="nav-item">
+          <a class="nav-link" (click)="scrollToSection('portfolio')"
+            >Portfolio</a
+          >
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link" (click)="scrollToSection('pricings')">Pricings</a>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link" (click)="scrollToSection('blog')">Blog</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" (click)="scrollToSection('contact')">{{
+            "navbar.contact" | translate
+          }}</a>
+        </li>
+      </ul>
+
+      <!-- <div class="nav-button ms-auto xs-ml-0 xs-mt-20">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <button
+              type="button"
+              class="btn btn-lg btn-gradient-primary btn-circle"
+            >
+              Try it Free
+            </button>
+          </li>
+        </ul>
+      </div> -->
     </div>
+    <div class="nav-button ms-auto xs-ml-0 xs-mt-20">
+      <select
+        class="nav navbar-nav navbar-right btn btn-circle"
+        (change)="switchLanguage($event)"
+      >
+        <option value="am" class="option-val">Հայ</option>
+        <option value="en" class="option-val">Eng</option>
+        <option value="ru" class="option-val">Рус</option>
+      </select>
+    </div>
+  </div>
 </nav>
